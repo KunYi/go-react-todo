@@ -11,7 +11,7 @@ export interface Todo {
   done: boolean
 }
 
-export const ENDPOINT = "http://192.168.48.116:4000"
+export const ENDPOINT = window.location.protocol + "//" + window.location.hostname + ":4000"
 
 const fetcher = (url: string) =>
   fetch(`${ENDPOINT}/${url}`).then((r) => r.json())
